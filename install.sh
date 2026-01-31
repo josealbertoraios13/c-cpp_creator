@@ -47,7 +47,7 @@ fi
 #SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 
 # Go to home directory
-#cd "$HOME"
+cd "$HOME"
 
 # Delete the installation directory.
-#rm -rf $SCRIPT_DIR
+rm -rfv $SCRIPT_DIR
