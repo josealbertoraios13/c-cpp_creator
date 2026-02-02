@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# if any command returns an error, the script stops
+set -e
+
+# Variables that indicate the installation locations
+
+# WARNING: DO NOT CHANGE THE INSTALLATION PATHS BELOW UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING.
+# MODIFYING THESE VALUES INCORRECTLY MAY DELETE UNINTENDED FILES OR DIRECTORIES
+# AND MAY CAUSE THE PROGRAM TO STOP WORKING PROPERLY OR BREAK COMPLETELY
+INSTALL_DIR="$HOME/cpp_creator"
+BIN_DIR="$HOME/.local/bin"
+
+rm -rf "$INSTALL_DIR"
+
+rm -rf "$BIN_DIR/alcpp"
