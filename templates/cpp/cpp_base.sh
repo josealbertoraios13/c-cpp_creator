@@ -5,7 +5,7 @@ read anwser
 
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     sudo apt update
-    sudo apt install -y build-essential cmake
+    sudo apt install -y build-essential cmake pkg-config
 else
     echo "Skipped installation."
 fi

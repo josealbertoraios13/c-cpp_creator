@@ -5,7 +5,7 @@ read answer
 
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     sudo apt update
-    sudo apt install -y build-essential cmake
+    sudo apt install -y build-essential cmake pkg-config
 else
     echo "Skipped installation."
 fi
@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
 }
 EOF
 
-project_name="my_project"
+project_name="my_project_gtk4"
 
 if [ -n "$1" ]; then
     project_name="$1"
