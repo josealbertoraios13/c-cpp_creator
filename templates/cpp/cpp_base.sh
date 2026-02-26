@@ -1,6 +1,18 @@
+set -e
+
+echo "Do you want install gcc and cmake? (y/n): "
+read anwser
+
+if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
+    sudo apt update
+    sudo apt install -y build-essential cmake
+else
+    echo "Skipped installation."
+fi
+
 mkdir -p src include build
 
-cat << EOF > main.cpp
+cat << EOF > src/main.cpp
 #include <iostream>
 
 int main(){
@@ -22,9 +34,9 @@ cat << EOF > CMakeLists.txt
 cmake_minimum_required(VERSION 3.16)
 project(${project_name} LANGUAGES CXX)
 
-add_executable(${project_name} main.cpp)
+add_executable(${project_name} src/main.cpp)
 
-target_include_directories(${project_name} PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${project_name} PRIVATE \${CMAKE_SOURCE_DIR}/include)
 EOF
 
 cmake -S . -B build
