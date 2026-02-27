@@ -10,15 +10,15 @@ Created by me because I was tired of having to create folders and files to confi
 
 1- SSH:
 ```bash
-git clone git@github.com:josealbertoraios13/cpp-creator.git
-cd cpp-creator
+git clone git@github.com:josealbertoraios13/jacc-creator.git
+cd jacc-creator
 ```
 or
 
 1- HTTPS:
 ```bash
-git clone https://github.com/josealbertoraios13/c-cpp_creator.git
-cd c-cpp_creator
+git clone https://github.com/josealbertoraios13/jacc_creator.git
+cd jacc_creator
 ```
 
 2- Make the installation script executable:
@@ -38,11 +38,11 @@ alcc --version
 
 1- Get all available commands with:
 ```bash
-alcc --help
+jacc --help
 ```
 2- Base project example:
 ```bash
-alcc create base your_project (name)
+jacc create 'c' or 'cpp' base project_name
 ```
 3- Project base file tree
 ```bash
@@ -63,7 +63,7 @@ alcc create base your_project (name)
 │   │   ├── CMakeScratch
 │   │   ├── Makefile2
 │   │   ├── Makefile.cmake
-│   │   ├── your_project.dir
+│   │   ├── project_name.dir
 │   │   │   ├── build.make
 │   │   │   ├── cmake_clean.cmake
 │   │   │   ├── compiler_depend.make
@@ -90,9 +90,10 @@ alcc create base your_project (name)
 
 1- To uninstall use:
 ```bash
-alcc uninstall
+jacc uninstall
 
 ```
+
 
 
 
