@@ -1,4 +1,4 @@
-# c/cpp-creator
+# JACC-creator
 
 This shell script for Linux allows you to create pre-configured projects for the C/C++ language and the CMake project compiler.
 
@@ -93,5 +93,6 @@ alcc create base your_project (name)
 alcc uninstall
 
 ```
+
 
 
