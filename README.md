@@ -1,4 +1,4 @@
-# JACC-creator
+# c/cpp-creator
 
 This shell script for Linux allows you to create pre-configured projects for the C/C++ language and the CMake project compiler.
 
@@ -10,15 +10,15 @@ Created by me because I was tired of having to create folders and files to confi
 
 1- SSH:
 ```bash
-git clone git@github.com:josealbertoraios13/jacc_creator.git
-cd jacc-creator
+git clone git@github.com:josealbertoraios13/cpp-creator.git
+cd cpp-creator
 ```
 or
 
 1- HTTPS:
 ```bash
-git clone https://github.com/josealbertoraios13/jacc_creator.git
-cd jacc_creator
+git clone https://github.com/josealbertoraios13/c-cpp_creator.git
+cd c-cpp_creator
 ```
 
 2- Make the installation script executable:
@@ -38,11 +38,11 @@ alcc --version
 
 1- Get all available commands with:
 ```bash
-jacc --help
+alcc --help
 ```
 2- Base project example:
 ```bash
-jacc create 'c' or 'cpp' base project_name
+alcc create base your_project (name)
 ```
 3- Project base file tree
 ```bash
@@ -63,7 +63,7 @@ jacc create 'c' or 'cpp' base project_name
 │   │   ├── CMakeScratch
 │   │   ├── Makefile2
 │   │   ├── Makefile.cmake
-│   │   ├── project_name.dir
+│   │   ├── your_project.dir
 │   │   │   ├── build.make
 │   │   │   ├── cmake_clean.cmake
 │   │   │   ├── compiler_depend.make
@@ -90,11 +90,8 @@ jacc create 'c' or 'cpp' base project_name
 
 1- To uninstall use:
 ```bash
-jacc uninstall
+alcc uninstall
 
 ```
-
-
-
 
 
