@@ -23,7 +23,6 @@ fi
 mkdir -p src include build
 
 cat << EOF > include/application.hpp
-
 #ifndef GTKMM4_APPLICATION_HPP
 #define GTKMM4_APPLICATION_HPP
 
@@ -38,14 +37,16 @@ class Application : public Gtk::Window
         ~Application() override;
 
     protected:
+        const int MARGIN = 20;
+
         //Signal handlers:
         void on_button_clicked();
 
         //Member widgets:
         Gtk::Button m_button;
         Gtk::Box m_box;
-};
 
+};
 #endif
 EOF
 
@@ -56,7 +57,7 @@ cat << EOF > src/application.cpp
 Application::Application() : m_button("Hello World"), m_box(Gtk::Orientation::VERTICAL)   // creates a new button with label "Hello World".
 {
   // Sets the margin around the box.
-  m_box.set_margin(20);
+  m_box.set_margin(MARGIN);
 
   // When the button receives the "clicked" signal, it will call the
   // on_button_clicked() method defined below.

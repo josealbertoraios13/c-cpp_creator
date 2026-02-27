@@ -32,19 +32,18 @@ cat << EOF > include/application.hpp
 
 class Application : public Gtk::Window
 {
-  public:
-    Application();
-    ~Application() override;
+    public:
+        Application();
+        ~Application() override;
 
-  protected:
-    //Signal handlers:
-    void on_button_clicked();
+    protected:
+        // Signal handlers:
+        void on_button_clicked();
 
-    //Member widgets:
-    Gtk::Button m_button;
-    Gtk::ButtonBox m_button_box;
+        // Member widgets:
+        Gtk::Button m_button;
+        Gtk::ButtonBox m_button_box;
 };
-
 #endif
 EOF
 
@@ -56,7 +55,6 @@ int main(int argc, char* argv[]){
     auto app = Gtk::Application::create("org.gtkmm.example");
 
     Application win;
-
     //Shows the window and returns when it is closed.
     return app->run(win);
 }
@@ -66,7 +64,7 @@ cat << EOF > src/application.cpp
 #include "application.hpp"
 #include <iostream>
 
-Application::Application() : m_button("Hello World"), m_button_box()   // creates a new button with label "Hello World".
+Application::Application() : m_button("Hello World")   // creates a new button with label "Hello World".
 {
   // When the button receives the "clicked" signal, it will call the
   // on_button_clicked() method defined below.
