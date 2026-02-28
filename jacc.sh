@@ -53,7 +53,7 @@ case "$1" in
         project_list_function
         ;;
     "--version"|"-v")
-        echo "jacc: 0.2.5"
+        echo "jacc: 1.0.0"
         ;;
     "--help"|"-h")
 
@@ -77,6 +77,9 @@ Create new C or C++ project:
 EOF
         project_list_function
         ;;
+    uninstall)
+        uninstall.sh
+    ;;
     *)
         echo "Invalid command. Use: 'jacc -h' or 'jacc --help' to list possible commands."
         ;;
