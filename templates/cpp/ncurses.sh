@@ -3,7 +3,7 @@
 set -e
 
 echo "Do you want install gcc, cmake and Pkg-Config? (y/n): "
-read anwser
+read answer
 
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     sudo apt update
